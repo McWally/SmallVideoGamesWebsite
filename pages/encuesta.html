@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M4 Play - Encuesta</title>
+    <link rel="icon" type="image/PNG" href="../media/bmo.png">
+    <link rel="stylesheet" href="../m4play.css">
+</head>
+<body>
+    <input id="dark-mode" class="dark-mode-checkbox" type="checkbox">
+    <div class="checkbox-container">
+        <img alt="" class="sunL" src="../media/sunL.png">
+        <img alt="" class="moonN" src="../media/moonN.png">
+        <header>
+            <!--<div class="menu" style="display:flex; background-color:black;"> menú de navegación (mio)
+                <img alt="" src="../../HTML-Ejercicios/itb.png" width="200" height="100" style="padding-right: 4%; padding-left: 20px;">
+                <a style="padding-top: 40px; padding-right: 30px;" href="../../index.html">Carpeta de Ejercicios</a>
+                <a style="padding-top: 40px; padding-right: 30px;" href="../../Practicas-HTML-CSS/main.html">Home</a>
+            </div>-->
+            <div class="headerstart">
+                <a class="titlestart" href="../index.html">M4 PLAY</a>
+                <a href="../index.html"><img alt="" class="imgstart" src="../media/bmo.png"></a>
+                <p class="titlestart">Games 4 Smile</p>
+            </div>
+        </header>
+        <nav class="noAbsoluteNav">
+            <div class="navstart">
+                <a href="../index.html">Home</a>
+                <a href="videojuegos.html">Videojuegos</a>
+                <a href="noticias.html">Noticias</a>
+                <a href="ranking.html">Ranking</a>
+                <a href="encuesta.html">Encuesta</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </nav>
+        <main class="encuestaMain">
+            <h2>Encuesta &ensp; Rapida</h2>
+            <section class="encuestaAndAside">
+                <form class="contactForm encuestaForm" method="get">
+                    <label for="nameEnc">Pon tu nombre: </label>
+                    <input type="text" id="nameEnc" name="nameEnc" placeholder="Escriba aquí..."><br>
+                    <label for="poster">Sube una foto de tu juego favorito: </label>
+                    <input type="button" id="poster" name="poster" value="Selecciona un archivo"><br>
+                    <textarea placeholder="Escribe lo que te gusta sobre los juegos"></textarea><br>
+                    <input type="text" id="idiomas" name="idioma" list="idioma" placeholder="Idioma">
+                    <label for="idoma" class="idiomaEncuestaLbl">En que idioma sueles jugar</label>
+                    <datalist id="idioma">
+                        <option label="Inglés" value="Inglés"></option>
+                        <option label="Español" value="Español"></option>
+                        <option label="Catalán" value="Catalán"></option>
+                    </datalist><br>
+                    <label for="hora">A que hora juegas más: </label>
+                    <input type="time" id="hora" name="hora"><br>
+                    <label for="week">Que dia juegas más:</label><br>
+                    <select id="week" name="week" size="4" multiple>
+                        <option value="Lunes">Lunes</option>
+                        <option value="Martes">Martes</option>
+                        <option value="Miércoles">Miércoles</option>
+                        <option value="Jueves">Jueves</option>
+                        <option value="Viernes">Viernes</option>
+                        <option value="Sábado">Sábado</option>
+                        <option value="Domingo">Domingo</option>
+                    </select>
+                </form>
+                <aside>
+                    <h4>Encuesta en construcción</h4>
+                    <h4>- Encuestas Online -</h4>
+                    <a target="_blank" href="https://es.surveymonkey.com/r/X2M6CFY">Link 1</a>
+                    <a target="_blank" href="https://es.surveymonkey.com/r/X2M6CFY">Link 2</a>
+                    <a target="_blank" href="https://es.surveymonkey.com/r/X2M6CFY">Link 3</a>
+                    <a target="_blank" href="https://es.surveymonkey.com/r/X2M6CFY">Link 4</a>
+                </aside>
+            </section>
+        </main>
+        <footer class="footerend">
+            <div class="socialend">
+                <a target="_blank" href="https://es-es.facebook.com/itecbcn/"><img class="fblogo" alt="" src="../media/facebook-logo.png"></a>
+                <a target="_blank" href="https://twitter.com/itecbcn"><img class="twlogo" alt="" src="../media/twitter-logo.png"></a>
+                <a target="_blank" href="https://www.instagram.com/itecbcn/?hl=es"><img class="iglogo" alt="" src="../media/instagram-logo.png"></a>
+                <a target="_blank" href="https://www.youtube.com/channel/UCoaBtXoia1xR2T3Bb5FRUnQ"><img class="ytlogo" alt="" src="../media/youtube-logo.png"></a>
+            </div>
+            <address><a target="_blank" href="https://www.google.com/maps/place/Institut+Tecnològic+de+Barcelona/@41.4534227,2.1840993,17z/data=!3m1!4b1!4m5!3m4!1s0x12a4bcfdad2100a9:0x3c4e7db0a61a83e0!8m2!3d41.4534187!4d2.1862933">Carrer d'Aiguablava 121<br>08033 Barcelona</a></address>
+            <p>Copyright</p>
+        </footer>
+    </div>
+</body>
+</html>

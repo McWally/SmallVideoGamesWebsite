@@ -1,0 +1,988 @@
+/* CSS PARA TODA LA WEB */
+
+*{
+    text-decoration: none;
+    /*border: solid 1px black;*/
+    transition: 500ms;
+}
+
+@font-face {
+    font-family: game1f;
+    src: url("fuentes/game1f.ttf");
+}
+
+@font-face {
+    font-family: robot2f;
+    src: url("fuentes/robot2f.ttf");
+}
+
+/* ITEMS, VARIABLES Y FUNCIONES PARA MODO OSCURO */
+
+:root {
+    /* Light mode variables */
+    --light-text: #0f0f0f;
+    --light-background: #ffffff;
+    --light-shadow: 0px 0px 5px black;
+    --light-shadow-hover: 0px 0px 15px black;
+    --light-hover: rgb(224, 224, 224);
+    --light-brightness: brightness(100%);
+    --light-background-h2: black;
+    --light-h4: white;
+    --light-header: #d6c8d8;
+    --light-nav-foot: #2f1852;
+    --light-input-bg: rgb(65, 17, 78);
+
+    /* Dark mode variables */
+    --dark-text: #FDF8F7;
+    --dark-background: #272727;
+    --dark-shadow: 0px 0px 5px white;
+    --dark-shadow-hover: 0px 0px 15px white;
+    --dark-hover: rgb(74, 74, 74);
+    --dark-brightness: brightness(95%);
+    --dark-background-h2: #6d5692;
+    --dark-h4: rgba(0, 255, 255, 0.632);
+    --dark-header: #1a021d;
+    --dark-nav-foot: #180930;
+    --dark-input-bg: rgb(131, 107, 141);
+}
+
+.dark-mode-checkbox{
+    position: sticky;
+    display: flex;
+    justify-content: flex-start;
+    top: 170px;
+    left: 95%;
+    right: 2%;
+    z-index: 4;
+    opacity: 0;
+    width: 30px;
+    height: 30px;
+}
+
+.sunL{
+    position: sticky;
+    display: flex;
+    justify-content: flex-start;
+    top: 170px;
+    left: 95%;
+    z-index: 3;
+    width: 30px;
+    height: 30px;
+    filter: brightness(150%);
+    box-shadow: 0px 0px 20px yellow;
+    border-radius: 15px;
+}
+
+.moonN{
+    position: sticky;
+    display: flex;
+    justify-content: flex-start;
+    top: 170px;
+    left: 95%;
+    z-index: 3;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+    filter: brightness(150%);
+    box-shadow: 0px 0px 20px rgb(255, 255, 255);
+    border-radius: 15px;
+}
+
+.dark-mode-checkbox:checked ~ .checkbox-container{
+    /* Cambiar de light a dark */
+    --light-text: var(--dark-text);
+    --light-background: var(--dark-background);
+    --light-shadow: var(--dark-shadow);
+    --light-shadow-hover: var(--dark-shadow-hover);
+    --light-hover: var(--dark-hover);
+    --light-brightness: var(--dark-brightness);
+    --light-background-h2: var(--dark-background-h2);
+    --light-h4: var(--dark-h4);
+    --light-header: var(--dark-header);
+    --light-nav-foot: var(--dark-nav-foot);
+    --light-input-bg: var(--dark-input-bg);
+}
+
+.dark-mode-checkbox:checked ~ .checkbox-container .sunL{
+    opacity: 0;
+}
+
+.dark-mode-checkbox:checked ~ .checkbox-container .moonN{
+    opacity: 1;
+}
+
+/* FINAL */
+
+/*----------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+/* ETIQUETAS GENERALES */
+
+body{
+    text-align: center;
+    margin-top: 0px;
+    margin-left: 0px;
+    background-color: var(--light-background);
+    filter: brightness(99%);
+    width: 100%;
+}
+
+h2{
+    background-color: var(--light-background-h2);
+    background-size: 100%;
+    padding: 7px;
+    border-radius: 20px;
+    margin-top: 70px;
+    text-align: center;
+    font-family: game1f;
+    font-weight: normal;
+    filter: brightness(100%);
+    color: rgb(236, 236, 236);
+    font-size: 30px;
+}
+
+article:not(.rankhome *){
+    box-shadow: var(--light-shadow);
+    filter: var(--light-brightness);
+}
+
+nav:not(.noAbsoluteNav){
+    width: 100%;
+    height: 80%;
+    position: absolute;
+}
+
+.noAbsoluteNav{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+main{
+    width: 80%;
+    padding: 70px 10% 80px 10%;
+    background-color: var(--light-background);
+}
+
+.noAbsoluteNav + main h2:first-child{
+    margin-top: 0px;
+}
+
+/* FINAL */
+
+/*----------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+/* HOME PAGE */
+
+/* Items de .headerstart y .navstart */
+
+.headerstart{
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: var(--light-header);
+    margin-top: -99px;
+    padding: 30px 0px 25px 0px;
+}
+
+.headerstart .imgstart{
+    height: 70%;
+    width: 100px;
+}
+
+.headerstart .imgstart:hover{
+    filter: brightness(120%);
+}
+
+a.titlestart:hover{
+    text-shadow: 0px 0px 1px black;
+    filter: brightness(125%);
+}
+
+.titlestart{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #66789b;
+    font-size: 50px;
+    font-weight: bolder;
+    text-shadow: rgb(194, 193, 193) 1px 1px 1px;
+    margin: 0px 5px 0px 5px;
+}
+
+.titlestart:not(:first-child){
+    font-size: 25px;
+}
+
+.navstart{
+    background-color: var(--light-nav-foot);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    border-top: 2px solid rgba(255, 255, 255, 0.137);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.137);
+}
+
+.navstart a{
+    padding: 20px;
+    margin: 0px 0px 0px 0px;
+    text-transform: uppercase;
+    font-family: robot2f;
+    font-size: 70%;
+    font-weight: bolder;
+    color: white;
+    transition: 500ms;
+    border-radius: 5px;
+    text-shadow: #0a90ab 1px 1px 5px;
+    width: fit-content;
+}
+
+/* FINAL */
+
+/*----------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+/* Items de .gameshome */
+
+.gameshome{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: justify;
+}
+
+.gameshome article{
+    width: clamp(200px, 30%, 100%);
+    margin: 10px;
+    border-radius: 5px;
+    /* flex-basis: 270px; */
+    flex-grow: 1;
+    position: relative;
+    height: fit-content;
+    transition: 500ms;
+}
+
+.gameshome article span{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.gameshome a{
+    text-align: center;
+    font-weight: bold;
+    background-color: #565b8a;
+    color: var(--light-h4);
+    padding: 5px;
+    box-shadow: -0.5px -0.5px 3px rgba(255, 255, 255, 0.658);
+    text-transform: uppercase;
+    font-size: 10px;
+    transition: 500ms;
+    font-family: robot2f;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 5px;
+}
+
+.gameshome article p{
+    margin: 10px 0px 10px 10px;
+    font-size: 11px;
+    color: var(--light-text);
+    overflow-y: scroll;
+    height: clamp(100px, 100px, 100px);
+    padding-right: 15px;
+    font-family: robot2f;
+}
+
+.gametitle{
+    font-weight: bold;
+    text-align: center;
+    color: var(--light-h4);
+    background-color: #565b8a;
+    margin-bottom: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-transform: uppercase;
+    font-size: 13px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: robot2f;
+    transition: 500ms;
+}
+
+.gameshome  img{
+    width: 100%;
+    height: 100%;
+    transition: 500ms;
+    filter: brightness(80%);
+    border-radius: 5px 5px 1px 1px;
+    border-bottom: rgba(255, 255, 255, 0.534) solid 2px;
+    /* max-height: 130px; */
+}
+
+/* FINAL */
+
+/*----------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+/* Items de .asidesec */
+
+.asidesec{
+    display: flex;
+    margin-top: 20px;
+    height: fit-content;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.asidesec h2{
+    margin-top: 0px;
+}
+
+.asidesec section{
+    width: 70%;
+    flex-grow: 1;
+    margin-top: 30px;
+}
+
+/* FINAL */
+
+/*----------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+/* Items de .trucoshome */
+
+.trucoshome{
+    width: clamp(200px, 25%, 100%);
+    margin: 30px 10px 81px 10px;
+    flex-grow: 1;
+}
+
+.trucoshome div{
+    background-color: var(--light-background);
+    box-shadow: var(--light-shadow); /*0px 0px 4px rgba(255, 255, 255, 0.288)*/
+    width: 98%;
+    margin: 29px 1% 0px 1%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.trucoshome ul{
+    padding-top: 15px;
+}
+
+.trucoshome li{
+    color: var(--light-text);
+    text-align: left;
+}
+
+/* FINAL */
+
+/*----------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+/* Items de .newshome */
+
+.newshome{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: justify;
+    height: fit-content;
+    width: 100%;
+    position: relative;
+}
+
+.newstitle{
+    font-weight: bold;
+    text-align: left;
+    color: black;
+    background-color: #555fbd;
+    margin-bottom: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-transform: uppercase;
+    font-size: 13px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: robot2f;
+    transition: 500ms;
+    border-radius: 0px 50px 50px 0px;
+    width: 80%;
+}
+
+.newshome img{
+    width: 100%;
+    height: 50%;
+    margin-bottom: -5px;
+    border-top: rgba(255, 255, 255, 0.534) solid 2px;
+    filter: brightness(70%);
+    transition: 500ms;
+    border-radius: 1px 1px 5px 5px;
+}
+
+.newshome article{
+    width: clamp(200px, 45%, 100%);
+    margin: 10px;
+    border-radius: 5px;
+    /* flex-basis: 270px; */
+    height: fit-content;
+    flex-grow: 1;
+    position: relative;
+    transition: 500ms;
+    background-color: #8278917a;
+}
+
+.newshome a{
+    background-color: #555fbd;
+    position: absolute;
+    bottom: 7px;
+    right: 7px;
+    width: 40%;
+    border: 3px solid;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    padding: 5px;
+    box-shadow: -0.5px -1px 5px rgba(255, 255, 255, 0.658);
+    text-transform: uppercase;
+    font-size: 10px;
+    transition: 100ms;
+    font-family: robot2f;
+}
+
+.newshome span{
+    transition: 100ms;
+}
+
+.newshome p{
+    overflow-y: scroll;
+    height: clamp(100px, 100px, 100px);
+    padding-right: 20px;
+    padding-left: 10px;
+    color: var(--light-text);
+    font-family: robot2f;
+    font-size: 11px;
+}
+
+/* FINAL */
+
+/*----------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+/* Items de .rankhome */
+
+.rankhome{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    margin: 0px 5px 0px 5px;
+    position: relative;
+}
+
+.rankhome article{
+    width: clamp(100px, 13.5%, 145px);
+    padding: 10px;
+    box-shadow: var(--light-shadow);
+    border-radius: 50px;
+    background-color: #585261;
+    transition: 500ms;
+    margin: 0px 5px 20px 5px;
+}
+
+.rankhome img{
+    width: 100%;
+    box-shadow: 0px 0px 10px white;
+    border-radius: 70px;
+    background-color: white;
+}
+
+.rankhome a{
+    color: white;
+    height: 5px;
+}
+
+.rankhome p{
+    color: rgb(0, 255, 255);
+}
+
+/* FINAL *
+
+/*----------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+/* Items de .footerend */
+
+.footerend{
+    background-color: var(--light-nav-foot);
+    margin-bottom: -100%;
+    padding: 15px 50px 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    color: rgb(185, 185, 185);
+    box-shadow: 0px -1px 5px rgba(255, 255, 255, 0.329);
+    flex-wrap: wrap;
+}
+
+.footerend *{
+    width: clamp(150px, 30%, 100%);
+    flex-grow: 1;
+}
+
+.footerend :last-child{
+    margin-top: 10px;
+}
+
+.socialend a{
+    width: 25%;
+}
+
+.socialend .fblogo{
+    width: 30px;
+    height: 20px;
+}
+
+.socialend .twlogo{
+    width: 35px;
+    height: 28px;
+    margin-bottom: -2px;
+}
+
+.socialend .iglogo{
+    width: 20px;
+    height: 20px;
+}
+
+.socialend .ytlogo{
+    width: 20px;
+    height: 25px;
+    margin-left: 8px;
+    margin-bottom: -3px;
+}
+
+address a{
+    color: rgb(0, 234, 255);
+}
+
+/* FINAL */
+
+/* FINAL HOME PAGE */
+
+/*----------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+/* DIRECTORY & NEWS PAGE */
+
+.list-overflow{
+    height: 700px;
+    overflow-y: scroll;
+}
+
+.directory{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    width: 95%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.directory img{
+    width: 40%;
+    flex-grow: 1;
+    min-width: 210px;
+    max-height: 180px;
+}
+
+.listgame-news{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.listgame-news span{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.listgame-news li{
+    text-align: left;
+    color: var(--light-text);
+    font-family: robot2f;
+    font-size: small;
+}
+
+.listgame-news b{
+    margin-right: 5%;
+}
+
+i{
+    visibility: hidden;
+}
+
+.newstitle + ul i:last-child{
+    visibility: visible;
+}
+
+.listgame-news a{
+    text-align: center;
+    font-weight: bold;
+    background-color: #565b8a;
+    color: white;
+    padding: 5px;
+    box-shadow: -0.5px -0.5px 3px rgba(255, 255, 255, 0.658);
+    text-transform: uppercase;
+    font-size: 10px;
+    transition: 500ms;
+    font-family: robot2f;
+    border-top-left-radius: 10px;
+}
+
+.listgame-news li{
+    color: var(--light-text);
+}
+
+.listah4{
+    margin-top: 0px;
+}
+
+.unic-new span{
+    transition: 100ms;
+}
+
+/*FINAL DIRECTORY & NEWS PAGE */
+
+/*----------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+/* CONTACT & ENCUESTA PAGE */
+
+.contactForm{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.datos{
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    margin: 10px;
+    width: 80%;
+}
+
+.datosChild{
+    width: 45%;
+    height: 25px;
+    margin: 10px;
+}
+
+.datosBox{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(174, 170, 170);
+    color: black;
+    border-radius: 5px;
+}
+
+.contactForm label{
+    font-family: robot2f;
+    color: var(--light-text);
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.textAreaShort{
+    margin-top: 50px;
+    width: 79%;
+}
+
+.textAreaLarge{
+    margin-top: 30px;
+    width: 79%;
+}
+
+.textAreaShort .formTextShort{
+    width: 100%;
+    height: 25px;
+    background-color: rgb(174, 170, 170);
+    color: black;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.textAreaLarge .formTextLarge{
+    width: 100%;
+    background-color: rgb(174, 170, 170);
+    color: black;
+    border-radius: 10px;
+}
+
+.enviarButton{
+    margin-top: 10px;
+    width: 20%;
+    height: 30px;
+    background-color: rgb(119, 53, 135);
+    color: white;
+}
+
+.enviarButton:hover{
+    background-color: rgb(95, 95, 214);
+}
+
+.encuestaForm{
+    padding: 30px;
+    background-color: rgb(155, 81, 173);
+    width: 60%;
+    border-radius: 50px;
+}
+
+.encuestaForm input{
+    margin-bottom: 20px;
+}
+
+.encuestaForm *:not(label){
+    background-color: rgb(177, 177, 177);
+    width: 100%;
+}
+
+.encuestaForm label{
+    color: black;
+}
+
+.idiomaEncuestaLbl{
+    margin-top: -40px;
+}
+
+.encuestaAndAside{
+    display: flex;
+    justify-content: space-around;
+}
+
+.encuestaAndAside aside{
+    background-color: rgb(155, 81, 173);
+    width: 30%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 5px;
+}
+
+.encuestaAndAside aside h4:first-child{
+    background-color: red;
+    border-radius: 5px;
+    filter: brightness(120%);
+    color: yellow;
+}
+
+/*FINAL CONTACT & ENCUESTA PAGE */
+
+/*----------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+/* SINGLE GAME PAGE */
+
+.gameUnic{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.gameDetails{
+    width: 60%;
+    border-radius: 10px;
+    flex-grow: 1;
+}
+
+.gameDetails h2{
+    font-size: 100%;
+}
+
+.gameDetails img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.gameDetails p, .gameDetails li{
+    text-align: justify;
+    margin: 10px;
+    color: var(--light-text);
+    font-size: clamp(9px, 13px, 13px);
+}
+
+.tableGameDetails{
+    width: 30%;
+    margin-left: 10px;
+    background-color: rgb(184, 184, 184);
+    border: 1px red solid;
+    border-radius: 10px;
+    flex-grow: 1;
+}
+
+.tableGameDetails td{
+    border: 1px red solid;
+}
+
+/* FINAL SINGLE GAME PAGE */
+
+/*----------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+/* EFECTOS - HOVERS */
+
+.navstart a:hover{
+    background-color: #070011;
+    margin: 15px 0px 15px 0;
+    transition: 500ms;
+}
+
+.gameshome article:hover{
+    background-color: var(--light-hover);
+    color: white;
+    transition: 500ms;
+    box-shadow: var(--light-shadow-hover);
+    filter: brightness(85%);
+}
+
+.newshome article:hover{
+    background-color: var(--light-hover);
+    color: white;
+    transition: 500ms;
+    box-shadow: var(--light-shadow-hover);
+    filter: brightness(90%);
+}
+
+.directory:hover{
+    box-shadow: var(--light-shadow-hover);
+    background-color: var(--light-hover);
+}
+
+article:hover img:not(.rankhome img){
+    filter: brightness(90%);
+    transition: 500ms;
+}
+
+article:hover h4:not(.rankhome h4){
+    filter: brightness(200%);
+    transition: 500ms;
+    color: black;
+}
+
+article:hover a:not(.rankhome a){
+    filter: brightness(200%);
+    transition: 500ms;
+    color: black;
+}
+
+.gameshome a:hover, .listgame-news a:hover{
+    padding-right: 20px;
+    transition: 500ms;
+    background-color: #2e738a;
+}
+
+.newshome a:hover{
+    background-color: #2e738a;
+    transition: 100ms;
+    font-size: 13px;
+    width: 42%;
+}
+
+.newshome span:hover{
+    transition: 100ms;
+}
+
+.rankhome article:hover{
+    box-shadow: var(--light-shadow-hover);
+}
+
+.unic-new:hover a{
+    transition: 100ms;
+}
+
+.unic-new:hover span{
+    transition: 50ms;
+}
+
+.unic-new a:hover{
+    background-color: #0b849c;
+    transition: 100ms;
+}
+
+.datosBox:hover{
+    filter: brightness(110%);
+    box-shadow: var(--light-shadow);
+}
+
+::-webkit-scrollbar{
+    width: 12px;
+    border-left: 0.2px solid rgba(197, 197, 197, 0.151);
+    background-color: #180930;
+  }
+
+::-webkit-scrollbar-thumb{
+    background-color: #533F74;
+    transition: 500ms;
+    border-radius: 5px;
+  }
+  
+::-webkit-scrollbar-thumb:hover{
+    background-color: #826ea1;
+    transition: 500ms;
+  }
+
+p::-webkit-scrollbar{
+    width: 8px;
+    border-radius: 5px;
+}
+
+p::-webkit-scrollbar-track{
+    background-color: rgba(255, 255, 255, 0.74);
+    border-radius: 10px;
+}
+
+p::-webkit-scrollbar-thumb{
+    background-color: rgb(35, 35, 35);
+    border-radius: 10px;
+}
+
+.checkbox-container{
+    background-color: var(--container-background);
+}
+
+.list-overflow::-webkit-scrollbar{
+    border-radius: 10px;
+}
+
+  /* FINAL */
