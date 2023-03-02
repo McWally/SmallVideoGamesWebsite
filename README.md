@@ -1,5 +1,5 @@
-# Small Video Games Website
-- [Small Video Games Website](#small-video-games-website)
+# Small Videogames Website
+- [Small Videogames Website](#small-videogames-website)
   - [Intro](#intro)
   - [Goals](#goals)
   - [The Beginning](#the-beginning)
