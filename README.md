@@ -1,13 +1,13 @@
 # Small Video Games Website
 - [Small Video Games Website](#small-video-games-website)
-- [Intro](#intro)
+  - [Intro](#intro)
 - [Goals](#goals)
 - [The Beginning](#the-beginning)
 - [Added Features](#added-features)
 - [How It Looks Like](#how-it-looks-like)
 - [See More](#see-more)
 
-# Intro
+## Intro
 This is a **school-project** ([DAM](https://www.todofp.es/que-estudiar/loe/informatica-comunicaciones/des-aplicaciones-multiplataforma.html)v degree - 1st year) in Spain.
 
 The objective was to develop a `Mobile First` website as a small video games store/database.
