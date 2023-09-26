@@ -8,9 +8,7 @@
   - [See More](#see-more)
 
 ## Intro
-This is a **school-project** ([DAM](https://www.todofp.es/que-estudiar/loe/informatica-comunicaciones/des-aplicaciones-multiplataforma.html)v degree - 1st year) in Spain.
-
-The objective was to develop a `Mobile First` website as a small video games store/database.
+Objective: develop a `Mobile First` website as a small video games store/database (ONLY HTML - CSS).
 
 ## Goals
 Get a website with a similar structure and style to the following
